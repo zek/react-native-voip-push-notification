@@ -143,6 +143,7 @@ export default class RNVoipPushNotification {
                 this._alert = notifVal.alert;
                 this._sound = notifVal.sound;
                 this._badgeCount = notifVal.badge;
+                this._category = notifVal.category;
             } else {
                 this._data[notifKey] = notifVal;
             }
@@ -177,11 +178,20 @@ export default class RNVoipPushNotification {
     getBadgeCount() {
         return this._badgeCount;
     }
-  
+
+    /**
+     * Gets the category object on the notif
+     */
+    getCategory() {
+        return this._category;
+    }
+
     /**
      * Gets the data object on the notif
      */
     getData() {
         return this._data;
     }
+
+
 }
