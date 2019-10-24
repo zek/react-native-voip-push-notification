@@ -144,6 +144,7 @@ export default class RNVoipPushNotification {
                 this._sound = notifVal.sound;
                 this._badgeCount = notifVal.badge;
                 this._category = notifVal.category;
+                this._data['_aps'] = notifVal;
             } else {
                 this._data[notifKey] = notifVal;
             }
